@@ -1,34 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const firstName = 'Reski Mulud';
-  const lastName = 'Muchamad';
-  const age = 20;
-  const job = 'Mahasiswa';
 
-  const getFullName = (firstName, lastName) => `${firstName} ${lastName}`;
-  const inputBox = <input placeholder="Enter Data" autoComplete />;
+  const blogArr = [
+    {
+      title: "Blog Title 1",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat esse mollitia neque nemo labore repellendus illo incidunt magnam tenetur? Magnam."
+    },
+    {
+      title: "Blog Title 2",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat esse mollitia neque nemo labore repellendus illo incidunt magnam tenetur? Magnam."
+    },
+    {
+      title: "Blog Title 3",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat esse mollitia neque nemo labore repellendus illo incidunt magnam tenetur? Magnam."
+    }
+  ];
 
-  const myArr = [1, 2, 3, 4, 5];
-  const myObj = {
-    name: 'Reski Mulud Muchamad',
-    age: 20,
-    job: 'Mahasiswa'
-  }
+  const blogCard = blogArr.map((item, index) => {
+    console.log(item);
+
+    return (
+      <div className="cardStyle" key={index}>
+        <h3>{item.title}</h3>
+        <p>{item.description}</p>
+      </div>
+    )
+
+  })
 
   return (
     <div className="App">
-      <h3>Nama Saya Adalah {getFullName(firstName, lastName)}</h3>
-      <p>Usia : {age} tahun</p>
-      <p>Pekerjaan : {job}</p>
-
-      {inputBox}
-
-      {myArr[0]}
-
-      <p>Nama Saya adalah {myObj.name}</p>
-
+      {blogCard}
     </div>
   );
 }
