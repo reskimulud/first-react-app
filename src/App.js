@@ -1,4 +1,5 @@
 import './App.css';
+import BlogCard from './BlogCard';
 
 function App() {
 
@@ -21,10 +22,11 @@ function App() {
     console.log(item);
 
     return (
-      <div className="cardStyle" key={index}>
-        <h3>{item.title}</h3>
-        <p>{item.description}</p>
-      </div>
+      <BlogCard key={index}/>
+      // <div className="cardStyle" key={index}>
+      //   <h3>{item.title}</h3>
+      //   <p>{item.description}</p>
+      // </div>
     )
 
   })
