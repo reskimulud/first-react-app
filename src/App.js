@@ -22,7 +22,7 @@ function App() {
     console.log(item);
 
     return (
-      <BlogCard key={index}/>
+      <BlogCard key={index} className="cardStyle" title={item.title} description={item.description}/>
       // <div className="cardStyle" key={index}>
       //   <h3>{item.title}</h3>
       //   <p>{item.description}</p>
